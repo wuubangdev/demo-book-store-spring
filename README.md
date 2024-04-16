@@ -42,5 +42,3 @@ Nếu bạn muốn đóng góp vào dự án, vui lòng tạo pull request trên
 
 - Tên: [wuubangdev](https://github.com/wuubangdev)
 - Email: wuubangdev@gmail.com
-
-
