@@ -5,9 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
-    @GetMapping("/")
+    @GetMapping("/admin/user")
     public String getUserPage() {
-        return "admin/index";
+        return "admin/user/show";
     }
 
+    @GetMapping("/admin/user/create")
+    public String getUserCreatePage() {
+        return "admin/user/create";
+    }
 }

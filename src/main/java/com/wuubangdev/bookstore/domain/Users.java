@@ -16,7 +16,9 @@ public class Users {
     private String email;
     private String password;
     private String address;
-    private String number;
+    private String phone;
+    private String avatar;
+    private Date dob;
     private Date registrationDate;
     private Date lastLogin;
     private boolean isActive;
@@ -88,12 +90,20 @@ public class Users {
         this.address = address;
     }
 
-    public String getNumber() {
-        return number;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
 }
