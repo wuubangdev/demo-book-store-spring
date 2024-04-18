@@ -30,14 +30,14 @@
                                     <li class="breadcrumb-item"><a href="/admin/user">Table users</a></li>
                                     <li class="breadcrumb-item active">Create User</li>
                                 </ol>
-                                <form class="row">
+                                <form class="row" action="admin/user/create" method="post" modelAttribute="newUser">
                                     <div class="mb-3 col-md-6">
                                         <label for="email" class="form-label">Email:</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <input type="email" class="form-control" id="email" path="email">
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label for="password" class="form-label">Password:</label>
-                                        <input type="password" class="form-control" id="password">
+                                        <input type="password" class="form-control" id="password" path="password">
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label for="fullName" class="form-label">Full name:</label>
