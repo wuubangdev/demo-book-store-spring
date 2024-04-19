@@ -36,24 +36,32 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
+                                                    <th scope="col">STT</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Họ & Tên</th>
+                                                    <th scope="col">Năm sinh</th>
+                                                    <th scope="col">Hành động</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>
-                                                        <a href="/admin/user/detail" class="btn btn-info">Chi tiết</a>
-                                                        <a href="/admin/user/update" class="btn btn-primary">Cập
-                                                            nhật</a>
-                                                        <a href="/admin/user/delete" class="btn btn-danger">Xoá</a>
-                                                    </td>
-                                                </tr>
+                                                <c:forEach var="user" items="${users}">
+                                                    <tr>
+                                                        <th scope="row">${user.id}</th>
+                                                        <td>${user.email}</td>
+                                                        <td>${user.fullName}</td>
+                                                        <td>${user.dob}</td>
+                                                        <td>
+                                                            <a href="/admin/user/detail/${user.id}"
+                                                                class="btn btn-info">Chi
+                                                                tiết</a>
+                                                            <a href="/admin/user/update/${user.id}"
+                                                                class="btn btn-primary">Cập
+                                                                nhật</a>
+                                                            <a href="/admin/user/delete/${user.id}"
+                                                                class="btn btn-danger">Xoá</a>
+                                                        </td>
+                                                    </tr>
+                                                </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>

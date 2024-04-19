@@ -3,9 +3,9 @@ package com.wuubangdev.bookstore.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.wuubangdev.bookstore.domain.Books;
+import com.wuubangdev.bookstore.domain.User;
 
 @Repository
-public interface BooksRepository extends JpaRepository<Books, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
 }

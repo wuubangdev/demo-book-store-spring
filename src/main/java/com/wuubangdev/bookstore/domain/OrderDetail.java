@@ -1,20 +1,21 @@
 package com.wuubangdev.bookstore.domain;
 
-import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Orders {
+@Table(name = "orderDetails")
+public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    // Customer Id
-    private Date orderDate;
-    private double totalPrice;
+    // Order id;
+    // Book id;
+    private int quantity;
+    private double price;
 
     public long getId() {
         return id;
@@ -24,20 +25,20 @@ public class Orders {
         this.id = id;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
 }
